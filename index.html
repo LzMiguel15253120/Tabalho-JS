@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratório interativo para executar algoritmos em JavaScript.">
+    <title>Algoritmos em ação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="#inicio" aria-label="Página inicial">
+                <span class="brand-mark">JS</span>
+                <span>Algoritmos em ação</span>
+            </a>
+            <div class="topbar-status"><span class="status-dot"></span> Ambiente pronto</div>
+        </header>
+
+        <main id="inicio" class="workspace">
+            <section class="intro" aria-labelledby="page-title">
+                <p class="eyebrow">Laboratório interativo · JavaScript</p>
+                <h1 id="page-title">Pense. Execute.<br><em>Entenda.</em></h1>
+                <p class="intro-copy">Escolha um algoritmo, forneça os dados e veja a lógica ganhar vida em poucos segundos.</p>
+                <div class="algorithm-strip" aria-label="Algoritmos disponíveis">
+                    <span>06 algoritmos</span>
+                    <span class="strip-line"></span>
+                    <span>Execução local</span>
+                </div>
+            </section>
+
+            <section class="runner-grid" aria-label="Executar algoritmo">
+                <div class="panel control-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="section-kicker">01 / Escolha</p>
+                            <h2>Qual algoritmo<br>vamos explorar?</h2>
+                        </div>
+                        <span class="panel-number">A</span>
+                    </div>
+
+                    <div class="algorithm-options" role="listbox" aria-label="Selecione um algoritmo">
+                        <button class="algorithm-option active" type="button" data-algorithm="contagem" role="option" aria-selected="true">
+                            <span class="option-index">01</span><span><strong>Contagem</strong><small>Inteiros entre dois valores</small></span>
+                        </button>
+                        <button class="algorithm-option" type="button" data-algorithm="fibonacci" role="option" aria-selected="false">
+                            <span class="option-index">02</span><span><strong>Fibonacci</strong><small>Sequência e posição</small></span>
+                        </button>
+                        <button class="algorithm-option" type="button" data-algorithm="mdc" role="option" aria-selected="false">
+                            <span class="option-index">03</span><span><strong>MDC</strong><small>Máximo divisor comum</small></span>
+                        </button>
+                        <button class="algorithm-option" type="button" data-algorithm="primo" role="option" aria-selected="false">
+                            <span class="option-index">04</span><span><strong>Número primo</strong><small>Verificação de primalidade</small></span>
+                        </button>
+                        <button class="algorithm-option" type="button" data-algorithm="ordenacao" role="option" aria-selected="false">
+                            <span class="option-index">05</span><span><strong>Ordenação</strong><small>Quicksort em uma lista</small></span>
+                        </button>
+                        <button class="algorithm-option" type="button" data-algorithm="somatoria" role="option" aria-selected="false">
+                            <span class="option-index">06</span><span><strong>Somatória</strong><small>Soma de uma lista</small></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel execution-panel">
+                    <div class="panel-heading compact-heading">
+                        <div>
+                            <p class="section-kicker">02 / Dados de entrada</p>
+                            <h2 id="form-title">Contagem de inteiros</h2>
+                        </div>
+                        <span class="input-badge">INPUT</span>
+                    </div>
+
+                    <form id="algorithm-form" novalidate>
+                        <div id="input-fields" class="input-fields"></div>
+                        <button class="run-button" type="submit"><span>Executar algoritmo</span><span class="button-arrow">→</span></button>
+                    </form>
+
+                    <div id="result-card" class="result-card" aria-live="polite">
+                        <div class="result-placeholder"><span class="placeholder-mark">↗</span><span>O resultado aparecerá aqui</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lower-grid">
+                <div class="panel history-panel">
+                    <div class="panel-heading compact-heading">
+                        <div><p class="section-kicker">03 / Registro</p><h2>Execuções recentes</h2></div>
+                        <button id="clear-history" class="text-button" type="button">Limpar</button>
+                    </div>
+                    <div id="history-list" class="history-list"><p class="empty-history">Suas execuções aparecerão aqui.</p></div>
+                </div>
+                <aside class="panel note-panel">
+                    <p class="section-kicker">Nota de laboratório</p>
+                    <p class="note-quote">“A melhor forma de entender um algoritmo é observar cada entrada se transformar em uma resposta.”</p>
+                    <div class="note-footer"><span>Funções do projeto</span><span>JS / 2026</span></div>
+                </aside>
+            </section>
+        </main>
+        <footer class="footer"><span>Construído para explorar lógica, uma execução por vez.</span><span>Sem dados enviados para a internet.</span></footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
