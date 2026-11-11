@@ -14,6 +14,10 @@ function quicksort(array) {
     }
     return [...quicksort(menores), pivot, ...quicksort(maiores)];
 }
-console.log(quicksort([8, 3, 1, 6, 4, 7, 2, 5]));
-console.log(quicksort([10, 2, 9, 3, 1]));
-console.log(quicksort([5, 5, 5, 5]));
+if (require.main === module) {
+    console.log(quicksort([8, 3, 1, 6, 4, 7, 2, 5]));
+    console.log(quicksort([10, 2, 9, 3, 1]));
+    console.log(quicksort([5, 5, 5, 5]));
+}
+
+module.exports = quicksort;

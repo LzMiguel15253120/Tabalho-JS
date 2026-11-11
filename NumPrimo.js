@@ -9,7 +9,11 @@ function ehPrimo(n) {
     }
     return true;
 }
-console.log(ehPrimo(2));  // true
-console.log(ehPrimo(7));  // true
-console.log(ehPrimo(9));  // false
-console.log(ehPrimo(1));  // false
+if (require.main === module) {
+    console.log(ehPrimo(2));  // true
+    console.log(ehPrimo(7));  // true
+    console.log(ehPrimo(9));  // false
+    console.log(ehPrimo(1));  // false
+}
+
+module.exports = ehPrimo;

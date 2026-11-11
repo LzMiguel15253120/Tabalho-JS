@@ -1,9 +1,17 @@
-const fibonnaci = require('../fibonacci');
+const fibonacci = require('../Fibonacci');
 
-test('Os 10 primeiros números da contagem de fibonnaci devem ser os corretos', () => {
-    expect(fibonnaci(10)).toMatchObject([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
-});
+describe('fibonacci', () => {
+  test('returns the Fibonacci value at the requested position', () => {
+    expect(fibonacci(10)).toBe(55);
+  });
 
-test('Os 2 primeiros números da contagem de fibonnaci devem ser 0 e 1', () => {
-    expect(fibonnaci(2)).toMatchObject([0, 1]);
+  test('returns zero for zero or negative positions', () => {
+    expect(fibonacci(0)).toBe(0);
+    expect(fibonacci(-1)).toBe(0);
+  });
+
+  test('returns the first two sequence values', () => {
+    expect(fibonacci(1)).toBe(1);
+    expect(fibonacci(2)).toBe(1);
+  });
 });

@@ -6,9 +6,11 @@ function mdc(a, b) {
     }
     return Math.abs(a);
 }
-console.log(mdc(12, 18)); // 6
-console.log(mdc(24, 36)); // 12
-console.log(mdc(49, 14)); // 7
-console.log(mdc(0, 15)); // 15
+if (require.main === module) {
+    console.log(mdc(12, 18)); // 6
+    console.log(mdc(24, 36)); // 12
+    console.log(mdc(49, 14)); // 7
+    console.log(mdc(0, 15)); // 15
+}
 
 module.exports = mdc;

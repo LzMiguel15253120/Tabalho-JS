@@ -5,6 +5,10 @@ function somatorio(numeros) {
     }
     return soma;
 }
-console.log(somatorio([1, 2, 3, 4, 5])); // 15
-console.log(somatorio([10, 20, 30]));    // 60
-console.log(somatorio([7, 3, 2]));       // 12
+if (require.main === module) {
+    console.log(somatorio([1, 2, 3, 4, 5])); // 15
+    console.log(somatorio([10, 20, 30]));    // 60
+    console.log(somatorio([7, 3, 2]));       // 12
+}
+
+module.exports = somatorio;

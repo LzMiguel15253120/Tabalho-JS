@@ -8,6 +8,10 @@ function contarInteirosEntre(inicio, fim) {
     }
     return quantidade;
 }
-console.log(contarInteirosEntre(1, 10)); // 10
-console.log(contarInteirosEntre(5, 3));  // 3
-console.log(contarInteirosEntre(7, 7));  // 1
+if (require.main === module) {
+    console.log(contarInteirosEntre(1, 10)); // 10
+    console.log(contarInteirosEntre(5, 3));  // 3
+    console.log(contarInteirosEntre(7, 7));  // 1
+}
+
+module.exports = contarInteirosEntre;
